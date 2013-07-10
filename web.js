@@ -1,9 +1,11 @@
+var fs = require('fs');
 var express = require('express');
 
+var text = fs.readFileSync('index.html');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  response.send('GALO 4 X 1 NEWELLS');
+  response.send(buf.toString());
 });
 
 var port = process.env.PORT || 5000;
